@@ -19,9 +19,34 @@ Array.prototype.twoSum = function() {
                 debugger
                 pairsArray.push([this[i], this[i + 1]]);
             }
-        // }
+            // }
+        }
+        return pairsArray;
+    };
+    
+    // [1, -1, 2, 2].twoSum()
+    
+Array.prototype.transpose = function () {
+    let transposeArray = [];  // Array.new(this.length) { Array.new(this[col].length)}
+    // [[],[],[]]
+    debugger
+    for (let row = 0; row < this.length; row++) {
+        debugger
+        for (let col = 0; col < this[row].length; col++) {
+            debugger
+            // let subArray = [];
+            if (col === 0) {
+                debugger
+                transposeArray.push([this[col][row]]);
+            } else {
+
+                transposeArray[row].push(this[col][row])
+
+            }
+        }
     }
-    return pairsArray;
+    return transposeArray;
 };
 
-[1, -1, 2, 2].twoSum()
+
+// [[1, 2, 3], [4, 5, 6], [7, 8, 9]].transpose()
